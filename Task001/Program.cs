@@ -7,8 +7,11 @@ int numB = int.Parse(Console.ReadLine());
 
 double Method(int numberA, int numberB)
 {
-    double numC = Math.Pow(numberA, numberB);
-    return numC;
+    int numberC = 1;
+    for (int i = 1; i <= numberB; i++)
+    {
+        numberC = numberC * numberA;
+    }
+    return numberC;
 }
-double numD = Method(numA, numB);
-Console.WriteLine("Первое число возведенное в степень второго числа = " + numD);
+Console.WriteLine("Первое число возведенное в степень второго числа = " + Method(numA, numB));
